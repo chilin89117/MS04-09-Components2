@@ -2,10 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <h1>Exercise 8: Components</h1>
         <br>
-        <button @click="selected='appBlue'">Blue</button>
-        <button @click="selected='appGreen'">Green</button>
-        <button @click="selected='appRed'">Red</button>
+        <button @click="selected='appBlue'" class="btn btn-primary">Blue</button>
+        <button @click="selected='appGreen'" class="btn btn-success">Green</button>
+        <button @click="selected='appRed'" class="btn btn-danger">Red</button>
         <hr>
 
           <component :is="selected"><h2>{{selected}}</h2></component>
@@ -33,6 +34,3 @@
     },
   };
 </script>
-
-<style scoped>
-</style>

@@ -1,24 +1,25 @@
-# 05-components (No Laravel)
+# MS04-05 Components (No Laravel)
+**Note: edit `main.js` to switch between `App.vue` and `Exercise8.vue`**
+## `App.vue`
+* Uses `<keep-alive>` to maintain state of its child component
+* Uses `<component :is="">` to dynamically switch among child components
 
-> MS04-05 More Components
+### `Quote.vue` component
+* Inserts data into named slots
+	* `App.vue`: `<h3 slot="title">{{quoteTitle}}</h3>`
+	* `Quote.vue`: `<slot name="title"></slot>`
 
-## Build Setup
+### `New.vue` component
+* Has a counter to keep track of its state
+* Logs the following lifecycle hooks:
+	* `activated()`
+	* `deactivated()`
+	* `destroyed()`
 
-``` bash
-# install dependencies
-npm install
+#### End of Section 9, lecture 130.
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-### Edit 'main.js' to switch between:
-
-* 'App.vue' (up to lecture 128)
-* 'Exercise8.vue' (Assignment 8 on slots and dynamic compoents)
+## `Exercise8.vue`
+* Dynamically switches 3 child components
+	* `Blue.vue`
+	* `Green.vue`
+	* `Red.vue` 
